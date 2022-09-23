@@ -24,7 +24,6 @@ async function movieExists(req, res, next) {
 
 async function theatersList(req, res, next) {
   const movie_id = req.params.movieId;
-  console.log("movie_id", movie_id);
   res.json({ data: await service.readTheater(movie_id) });
 }
 

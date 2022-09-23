@@ -3,10 +3,12 @@ const express = require("express");
 const app = express();
 const notFound = require("./errors/notFound");
 const errorHandler = require("./errors/errorHandler");
-const moviesRouter = require("./movies/movies.Router");
+const moviesRouter = require("./movies/movies.router");
 const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router");
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/movies", moviesRouter);
