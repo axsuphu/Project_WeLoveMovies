@@ -11,7 +11,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-// app.use("/movies", moviesRouter);
+app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
 
