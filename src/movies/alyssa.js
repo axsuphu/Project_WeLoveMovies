@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const controller = require("./teddy");
+const controller = require("./controller");
 const methodNotAllowed = require("../errors/methodNotAllowed");
 
 router
