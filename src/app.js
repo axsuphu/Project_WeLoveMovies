@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const notFound = require("./errors/notFound");
 const errorHandler = require("./errors/errorHandler");
-const moviesRouter = require("./movies/movies.router");
+const moviesRouter = require("./movies/alyssa");
 const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router");
 const cors = require("cors");
@@ -11,7 +11,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-app.use("/movies", moviesRouter);
+// app.use("/movies", moviesRouter);
 app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
 
