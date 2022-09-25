@@ -39,6 +39,7 @@ const mappedReviews = mapProperties({
   updated_at: "critic.updated_at",
 });
 
+//returns all reviews with the movie id passed in as parameter
 function readReviews(movieId) {
   return knex("reviews as r")
     .join("critics as c", "r.critic_id", "c.critic_id")

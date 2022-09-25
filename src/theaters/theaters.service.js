@@ -13,9 +13,8 @@ const reduceMovies = reduceProperties("theater_id", {
   is_showing: ["movies", null, "is_showing"],
 });
 
-//loop over each theater_id
-//match the movie to theater_id
-//show all movies in seperate category within each theater
+//returns all the `theaters` and, the movies playing at each theatre added to the `movies` key
+
 function list(req, res, next) {
   return knex("theaters as t")
     .join("movies_theaters as mt", "t.theater_id", "mt.theater_id")
