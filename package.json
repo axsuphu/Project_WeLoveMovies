@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "zid-be-project-movie-01-qualified",
   "main": "src/app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "docker:build": "docker image build . -t thinkful-ed/zid-be-project-movie-01-qualified",
     "docker:run": "docker run --rm -it -p 5000:5000 thinkful-ed/zid-be-project-movie-01-qualified",
